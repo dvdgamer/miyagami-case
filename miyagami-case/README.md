@@ -27,4 +27,4 @@ I'll be using these Logs to document my thought process and struggles throught t
 - First hour was spent reasearching, seeing how to approach the project as I'm unfamiliar with Node.js and Express.
   I saw a Youtube tutorial on creating the backend and asked an LLM in which steps I should approach the challenge.
 
--
+- Another problem. Don't know one which file to implement the fetchAPI. I'll solve this by reading the Flickr docs and using another project as reference
