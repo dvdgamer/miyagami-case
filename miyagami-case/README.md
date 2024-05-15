@@ -23,6 +23,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 I'll be using these Logs to document my thought process and struggles throught the build of the app
 
+
 - First hour was spent reasearching, seeing how to approach the project as I'm unfamiliar with Node.js and Express.
   I saw a Youtube tutorial on creating the backend and asked an LLM in which steps I should approach the challenge.
 
