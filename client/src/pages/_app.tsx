@@ -1,6 +1,24 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+import Home from "@/pages/index";
+import React, { useEffect, useState } from 'react';
+
+function App() {
+  const [data, setData] = useState(null);
+
+  // Fetches data from the express server
+  useEffect(() => {
+    fetch('http://localhost:3000/')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []);
+
+  return (
+    <div>
+      {/* {data} */}
+      <Home />
+    </div>
+  );
 }
+
+export default App;
