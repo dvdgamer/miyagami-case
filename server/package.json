@@ -1,12 +1,16 @@
 {
   "dependencies": {
     "@types/express": "^4.17.21",
-    "express": "^4.19.2"
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "xml2js": "^0.6.2"
   },
   "scripts": {
     "dev": "nodemon server.ts"
   },
   "devDependencies": {
+    "@types/xml2js": "^0.4.14",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2"
   }

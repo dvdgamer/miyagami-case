@@ -21,3 +21,5 @@ I'll be using these Logs to document my thought process and struggles throught t
 - Another problem. Don't know one which file to implement the fetchAPI. I'll solve this by reading the Flickr docs and using another project as reference
 
 - Starting the Express.js was new, it's now posting after following a youtube tutorial. Realized I needed to install extra dependencies due to using TS.
+
+- Now that I had the API connected the problem was translating XML to JSON. Luckily xml12 library takes care of that. The error handling was mainly AI generated tho  o(〃＾▽＾〃)o.
