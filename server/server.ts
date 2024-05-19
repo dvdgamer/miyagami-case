@@ -11,7 +11,7 @@ const port = 5000;
 app.use(cors());
 
 
-app.get('/api/hello', async (req: Request, res: Response) => {
+app.get('/', async (req: Request, res: Response) => {
   try {
 
     // gets data from the flickr public feed

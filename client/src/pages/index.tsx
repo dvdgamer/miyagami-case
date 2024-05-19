@@ -1,48 +1,50 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-// import styled from "@emotion/styled";
+import Feed from "../components/Feed";
+import Card from "../components/Card";
+import SearchBar from "../components/SearchBar";
 
+// Defines the shape of the data from the API
+export interface FeedItem {
+  id: string;
+  title: string;
+  link: { $: { href: string } }[];
+}
+
+// Defines the structure of the data received from the API
+interface Data {
+  feed: {
+    entry: FeedItem[];
+  };
+}
 
 export default function Home() {
-  const [data, setData] = useState(null);
-
+  // Initializes state to hold the data from the API
+  const [data, setData] = useState<Data | null>(null);
 
   // Fetches data from the express server
   useEffect(() => {
-    fetch("http://localhost:5000/api/hello")
+    fetch("http://localhost:5000/")
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
 
 
-
-  // displays Loading while the components are loading
+  // Displays Loading while the components are loading
   if (!data) {
     return <div>Loading...</div>;
   }
 
-
   return (
     <main>
-      <div className="container">
-
-        {/* fetches name and image for each card */}
-        {data && data.feed.entry.map((item: any) => {
-          return (
-            <div key={item.id}
-            className="p-4 m-4"
-            class="cards-container">
-              <p>{item.title}</p>
-              <Image
-                src={item.link[1].$.href}
-                alt={item.title}
-                width={500}
-                height={500}/>
-            </div>
-          );
-        })}
-
-      </div>
+      <SearchBar />
+      <Feed>
+        {/* Maps over the feed items and create a card for each one */}
+        {data.feed.entry.map((item: FeedItem) => {
+            return <Card key={item.id} item={item} />;
+          }
+        )}
+      </Feed>
     </main>
   );
 }

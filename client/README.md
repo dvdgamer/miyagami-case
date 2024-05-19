@@ -25,3 +25,7 @@ I'll be using these Logs to document my thought process and struggles throught t
 - Now that I had the API connected the problem was translating XML to JSON. Luckily xml12 library takes care of that. The error handling was mainly AI generated tho  o(〃＾▽＾〃)o.
 
 - I'm having troubles now trying to display the images. I'm trying to access through `item.link[0].$.href` but so far no luck. I don't know whether it is the wrong approach, API path or just the wrong API altogether :D
+
+- Got stuck for a long time trying to format the images and make a consistent feed. It's still not perfect but for sure in the right track as most sizes are consistent.
+
+- Made components to improve the readability of index.tsx. This was fairly straightforward
