@@ -16,13 +16,15 @@
   npm install
   ```
 
+
 ## Usage
   To run locally:
 
-1. Go to src/pages/index.tsx and change `fetch("https://miyagami-case-dquj.onrender.com/")` to `fetch("localhost:5000")`
+1. Start the server:
+  (See README.md inside server folder)
 
-2. Start the server:
-  (See README.md in server folder)
+2. Go to src/pages/index.tsx and change `fetch("https://miyagami-case-dquj.onrender.com/")` to `fetch("localhost:5000")`
+
 
 3. Start the application:
 
