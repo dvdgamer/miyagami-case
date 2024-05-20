@@ -9,12 +9,12 @@ const port = 5000;
 
 
 app.use(cors());
+app.use(express.json());
 
-
-app.get('/api/hello', async (req: Request, res: Response) => {
+app.get('/', async (req: Request, res: Response) => {
   try {
 
-    // gets data from the flickr public feed
+    // Gets data from the flickr public feed
     const response = await axios.get('https://api.flickr.com/services/feeds/photos_public.gne');
     const parser = new xml2js.Parser();
 
@@ -34,6 +34,21 @@ app.get('/api/hello', async (req: Request, res: Response) => {
     res.status(500).json({ message: 'Error fetching data' });
   }
 });
+
+// app.get('/search', async (req: Request, res: Response) => {
+//   const searchTerm  = req.query.searchTerm;
+//   axios.get('https://api.flickr.com/services/rest', {
+//     params: {
+//       method: 'flickr.photos.search',
+//       api_key: process.env.FLICKR_API_KEY,
+//       text: searchTerm,
+//       format: 'json',
+//       nojsoncallback: 1,
+//     },
+//   })
+//   .then(response => console.log(response.data))
+//   .catch(error => console.log(error));
+// });
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
