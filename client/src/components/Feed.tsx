@@ -7,7 +7,7 @@ export default function Feed(props: { children: React.ReactNode }) {
       alignItems: "start",
       justifyContent: "center",
       margin: "20px 40px",
-      marginTop: "100px",
+      marginTop: "20px",
     }}>
       {props.children}
     </div>

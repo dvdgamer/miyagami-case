@@ -1,14 +1,10 @@
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Description
+I've built this app using the Flickr Public Feed API. Displays random photos in an organized manner on the webpage.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Live demo
+You can find the live demo file [here](URL)
 
 ## Logs
 
@@ -28,4 +24,7 @@ I'll be using these Logs to document my thought process and struggles throught t
 
 - Got stuck for a long time trying to format the images and make a consistent feed. It's still not perfect but for sure in the right track as most sizes are consistent.
 
-- Made components to improve the readability of index.tsx. This was fairly straightforward
+- Made components to improve the readability of index.tsx. This was fairly straightforward.
+
+- Getting the searchbar to work was the toughest by far. I'm struggling to shape the request and understand the data flow. I'd do it but at this point I've been doing this for 7h and I wasn't supposed to even spend so long on this (But did get excited)
+I'll now deploy it as is.
