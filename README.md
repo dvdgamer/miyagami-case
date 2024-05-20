@@ -1,5 +1,4 @@
 
-
 # Description
 I've built this app using the Flickr Public Feed API. Displays random photos in an organized manner on the webpage.
 

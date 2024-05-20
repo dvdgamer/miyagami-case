@@ -24,7 +24,7 @@ export default function Home() {
 
   // Fetches data from the express server
   useEffect(() => {
-    fetch("http://localhost:5000/")
+    fetch("https://miyagami-case-dquj.onrender.com/")
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
